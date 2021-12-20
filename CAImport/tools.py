@@ -72,3 +72,21 @@ def exceptLoop(func, *args, **kwargs):
         return func(*args, **kwargs)
     except Exception as e:
         return exceptLoop(func, *args, **kwargs)
+
+
+class SingletoneMeta(type):
+
+    def __init__(cls, name,
+                 bases, attrs):
+
+        super().__init__(name, bases, attrs)
+        cls._instance = None
+
+    def __call__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = super().__call__(*args, **kwargs)
+        return cls._instance
+
+
+class Singltone(metaclass=SingletoneMeta):
+    pass
