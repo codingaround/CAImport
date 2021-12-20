@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text()
 # This call to setup() does all the work
 setup(
     name="CAImport",
-    version="1.0.1",
+    version="1.0.2",
     description="Coding Around simple tools for python",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -25,7 +25,7 @@ setup(
     ],
     # packages=["CAImport"],
     packages=find_packages(exclude=("tests",)),
-    install_requires=['urllib3', 'grequests', 'concurrent'],
+    install_requires=['grequests', 'concurrent'],
     # entry_points={
     #    "console_scripts": [
     #    "realpython=instanceTuner.__main__:main",
