@@ -9,12 +9,12 @@ README = (HERE / "README.md").read_text()
 
 # This call to setup() does all the work
 setup(
-    name="instanceTuner",
+    name="CAImport",
     version="1.0.0",
-    description="Set limited type instances and overload functions like Java in python",
+    description="Coding Around simple tools for python",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/codingaround/InstanceTuner.git",
+    url="https://github.com/codingaround/CAImport.git",
     author="codingaround",
     author_email="codingaround90s@gmail.com",
     license="GNU",
