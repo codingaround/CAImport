@@ -25,7 +25,7 @@ setup(
     ],
     # packages=["CAImport"],
     packages=find_packages(exclude=("tests",)),
-    install_requires=['urllib', 'grequests', 'concurrent'],
+    install_requires=['urllib3', 'grequests', 'concurrent'],
     # entry_points={
     #    "console_scripts": [
     #    "realpython=instanceTuner.__main__:main",
