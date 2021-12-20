@@ -74,7 +74,7 @@ def exceptLoop(func, *args, **kwargs):
         return exceptLoop(func, *args, **kwargs)
 
 
-class SingletoneMeta(type):
+class SingletonMeta(type):
 
     def __init__(cls, name,
                  bases, attrs):
@@ -88,5 +88,5 @@ class SingletoneMeta(type):
         return cls._instance
 
 
-class Singltone(metaclass=SingletoneMeta):
+class Singleton(metaclass=SingletonMeta):
     pass
