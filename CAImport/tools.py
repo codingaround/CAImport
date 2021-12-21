@@ -12,38 +12,6 @@ def isIter(obj):
 # ********************
 
 
-def isDict(o):
-    try:
-        return getattr(o, 'keys')
-    except Exception:
-        return False
-
-
-def dictConverter(obj):
-
-    def convert(o):
-        ret = []
-        for k in o:
-            ret.append((('k', k), ('v', o[k])))
-        return ret
-
-    def extractItems(o):
-        ret = []
-        for i in o:
-            ret.append(
-                convert(i)
-                if isDict(i)
-                else extractItems(i)
-                if isIter(i)
-                else i
-            )
-        return ret
-
-    assert isIter(obj)
-    return convert(obj) \
-        if isDict(obj) else extractItems(obj)
-
-
 def hasInstancecheck(__instance):
     try:
         isinstance(object, __instance)
